@@ -3,7 +3,7 @@ class CallController < ApplicationController
 
   def enqueue
     digits = params[:Digits]
-    selected_product = digits == '1' ? 'ProgrammableVoice' : 'ProgrammableSMS'
+    selected_product = digits == '1' ? 'ProgrammableVoice' : 'ProgrammableVoice'
 
     twiml = TwimlGenerator.generate_task_enqueue(selected_product)
 
